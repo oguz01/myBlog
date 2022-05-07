@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 Route::get('/yazi-detay/{post:slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('posts.show');
+Route::post('/yazi-detay/{post:slug}', [\App\Http\Controllers\PostController::class, 'addComment'])->name('posts.add_comment');
 
 Route::get('/hakkimizda', function () {
     return view('hakkimizda');
