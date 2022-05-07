@@ -13,17 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/createuserimage', function () {
-
-$user = \App\Models\Image::find(2);
-return $user->imageable;
-
-});
 
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
 
 
 Route::get('/yazi-detay', function () {
