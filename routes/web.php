@@ -16,11 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [\App\Http\Controllers\HomeController::class,'index'])->name('home');
-
-
-Route::get('/yazi-detay', function () {
-    return view('yazi-detay');
-})->name('yazi-detay');
+Route::get('/yazi-detay/{post:slug}', [\App\Http\Controllers\PostController::class, 'show'])->name('posts.show');
 
 Route::get('/hakkimizda', function () {
     return view('hakkimizda');

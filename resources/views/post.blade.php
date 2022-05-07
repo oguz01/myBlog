@@ -8,7 +8,8 @@
                     <div class="row row-pb-lg">
                         <div class="col-md-12 animate-box">
                             <div class="classes class-single">
-                                <div class="classes-img" style="background-image: url({{   asset('asset/images/classes-1.jpg') }});">
+                                <div class="classes-img"
+                                    style="background-image: url({{ asset('asset/images/classes-1.jpg') }});">
                                 </div>
                                 <div class="desc desc2">
                                     <h3><a href="#">Developing Mobile Apps</a></h3>
@@ -49,7 +50,8 @@
                         <div class="col-md-12">
                             <h2 class="colorlib-heading-2">23 Comments</h2>
                             <div class="review">
-                                <div class="user-img" style="background-image: url({{   asset('asset/images/person1.jpg') }})"></div>
+                                <div class="user-img"
+                                    style="background-image: url({{ asset('asset/images/person1.jpg') }})"></div>
                                 <div class="desc">
                                     <h4>
                                         <span class="text-left">Jacob Webb</span>
@@ -64,7 +66,8 @@
                                 </div>
                             </div>
                             <div class="review">
-                                <div class="user-img" style="background-image: url({{   asset('asset/images/person2.jpg') }})"></div>
+                                <div class="user-img"
+                                    style="background-image: url({{ asset('asset/images/person2.jpg') }})"></div>
                                 <div class="desc">
                                     <h4>
                                         <span class="text-left">Jacob Webb</span>
@@ -79,7 +82,8 @@
                                 </div>
                             </div>
                             <div class="review">
-                                <div class="user-img" style="background-image: url({{   asset('asset/images/person3.jpg') }})"></div>
+                                <div class="user-img"
+                                    style="background-image: url({{ asset('asset/images/person3.jpg') }})"></div>
                                 <div class="desc">
                                     <h4>
                                         <span class="text-left">Jacob Webb</span>
@@ -142,72 +146,15 @@
                     </div>
                 </div>
 
-                <!-- SIDEBAR: start -->
+                <!--======== SideBar Başlangıç =====-->
                 <div class="col-md-4 animate-box">
                     <div class="sidebar">
-                        <div class="side">
-                            <h3 class="sidebar-heading">Categories</h3>
-                            <div class="block-24">
-                                <ul>
-                                    <li><a href="#">Education <span>10</span></a></li>
-                                    <li><a href="#">Courses <span>43</span></a></li>
-                                    <li><a href="#">Fashion <span>21</span></a></li>
-                                    <li><a href="#">Business <span>65</span></a></li>
-                                    <li><a href="#">Marketing <span>34</span></a></li>
-                                    <li><a href="#">Travel <span>45</span></a></li>
-                                    <li><a href="#">Video <span>22</span></a></li>
-                                    <li><a href="#">Audio <span>13</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="side">
-                            <h3 class="sidebar-heading">Recent Blog</h3>
-                            <div class="f-blog">
-                                <a href="blog.html" class="blog-img"
-                                    style="background-image: url({{   asset('asset/images/blog-1.jpg') }})">
-                                </a>
-                                <div class="desc">
-                                    <p class="admin"><span>18 April 2018</span></p>
-                                    <h2><a href="blog.html">Creating Mobile Apps</a></h2>
-                                    <p>Far far away, behind the word mountains</p>
-                                </div>
-                            </div>
-                            <div class="f-blog">
-                                <a href="blog.html" class="blog-img"
-                                    style="background-image: url({{   asset('asset/images/blog-2.jpg') }})">
-                                </a>
-                                <div class="desc">
-                                    <p class="admin"><span>18 April 2018</span></p>
-                                    <h2><a href="blog.html">Creating Mobile Apps</a></h2>
-                                    <p>Far far away, behind the word mountains</p>
-                                </div>
-                            </div>
-                            <div class="f-blog">
-                                <a href="blog.html" class="blog-img"
-                                    style="background-image: url({{   asset('asset/images/blog-3.jpg') }})">
-                                </a>
-                                <div class="desc">
-                                    <p class="admin"><span>18 April 2018</span></p>
-                                    <h2><a href="blog.html">Creating Mobile Apps</a></h2>
-                                    <p>Far far away, behind the word mountains</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="side">
-                            <h3 class="sidbar-heading">Tags</h3>
-                            <div class="block-26">
-                                <ul>
-                                    <li><a href="#">code</a></li>
-                                    <li><a href="#">design</a></li>
-                                    <li><a href="#">typography</a></li>
-                                    <li><a href="#">development</a></li>
-                                    <li><a href="#">creative</a></li>
-                                    <li><a href="#">codehack</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <x-blog.side-categories :categories="$categories" />
+                        <x-blog.recent-posts :recent_posts="$recent_posts" />
+                        <x-blog.tags :tags="$tags" />
                     </div>
                 </div>
+                <!--======== SideBar Bitiş =====-->
             </div>
         </div>
     </div>
