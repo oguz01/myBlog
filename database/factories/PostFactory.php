@@ -23,7 +23,7 @@ class PostFactory extends Factory
             'excerpt' => $this->faker->sentence(),
             'body' => $this->faker->paragraph(),
             'user_id' => \App\Models\User::factory(),
-            'category_id' => \App\Models\Category::factory()
+            'category_id' => \App\Models\Category::all()->random()->id
 
         ];
     }
