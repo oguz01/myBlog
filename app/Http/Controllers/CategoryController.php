@@ -9,12 +9,15 @@ class CategoryController extends Controller
 {
     public function index()
     {
+        return view('category.index', [
+            'categories' =>Category::withCount('posts')->get(),
+        ]);
     }
 
     public function show(Category $category)
     {
         $recent_posts = \App\Models\Post::latest()->take(5)->get();
-        $categories = \App\Models\Category::withCount('posts')
+        $categories = Category::withCount('posts')
             ->orderBy('posts_count', 'desc')
             ->take(10)->get();
         $tags = \App\Models\Tag::latest()->take(50)->get();

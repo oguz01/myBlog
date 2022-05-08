@@ -25,5 +25,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
+        $categories = \App\Models\Category::withCount('posts')->orderBy('posts_count','DESC')->take(10)->get();
+
+        \Illuminate\Support\Facades\View::share('navbar_category', $categories);
     }
 }

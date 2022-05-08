@@ -17,7 +17,8 @@ Route::get('/hakkimizda', \App\Http\Controllers\AboutController::class)->name('h
 Route::get('/iletisim', [\App\Http\Controllers\ContactController::class, 'create'])->name('iletisim');
 Route::post('/iletisim', [\App\Http\Controllers\ContactController::class, 'store'])->name('iletisim.store');
 
+Route::get('/kategori/', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
 Route::get('/kategori/{category:slug}', [\App\Http\Controllers\CategoryController::class, 'show'])->name('category.show');
-Route::get('/etiket/{tag:slug}', [\App\Http\Controllers\Tag::class, 'show'])->name('tags.show');
+Route::get('/etiket/{tag:name}', [\App\Http\Controllers\TagController::class, 'show'])->name('tags.show');
 
 require __DIR__ . '/auth.php';

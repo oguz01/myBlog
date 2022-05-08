@@ -74,11 +74,11 @@
                             <ul>
                                 <li><a href="{{ route('home') }}">Ana Sayfa</a></li>
                                 <li class="has-dropdown">
-                                    <a href="">Categories</a>
+                                    <a href="{{ route('category.index') }}">Categories</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Programming</a></li>
-                                        <li><a href="#">Games</a></li>
-                                        <li><a href="#">Soft Skills</a></li>
+                                       @foreach ($navbar_category as $category)
+                                       <li><a href="{{ route('category.show', $category) }}">{{ $category->name }}</a></li>
+                                       @endforeach
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('hakkimizda') }}">Hakkımızda</a></li>
