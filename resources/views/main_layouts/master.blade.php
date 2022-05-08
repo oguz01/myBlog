@@ -45,6 +45,8 @@
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
+
 
     <!-- Modernizr JS -->
     <script src="{{ asset('asset/js/modernizr-2.6.2.min.js') }}"></script>
@@ -282,6 +284,6 @@
     <!-- Main -->
     <script src="{{ asset('asset/js/main.js') }}"></script>
     @stack('js')
-</body>
 
+</body>
 </html>

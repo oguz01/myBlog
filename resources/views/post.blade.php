@@ -51,7 +51,7 @@
                             <h2 class="colorlib-heading-2">{{ count($post->comments) }} Comments</h2>
 
                             @foreach ($post->comments as $comment)
-                                <div id="commet_{{ $comment->id }}" class="review">
+                                <div id="comment_{{ $comment->id }}" class="review">
                                     <div class="user-img"
                                         style="background-image: url({{ $comment->user->image ? asset('storage/' . $comment->user->image->path) : 'https://images.assetsdelivery.com/compings_v2/salamatik/salamatik1801/salamatik180100019.jpg' }})">
                                     </div>
@@ -77,16 +77,14 @@
                     <div class="row animate-box">
                         <div class="col-md-12">
                             <h2 class="colorlib-heading-2">Makale Hakkında Düşünceleriniz...</h2>
-                            <x-blog.message :status="'success'" />
                             @auth
                                 <form method="post" action="{{ route('posts.add_comment', $post) }}">
                                     @csrf
                                     <div class="row form-group">
                                         <div class="col-md-12">
                                             <label for="the_comment">Yorumunuz</label>
-                                            <textarea place="Düşünceleriniz..." name="the_comment" id="the_comment" cols="15" rows="3" class="form-control">
-
-                                            </textarea>
+                                            <x-blog.form.textarea name="the_comment" value="{{ old('the_comment') }}"
+                                                placeholder="Yorumunuz..." />
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -94,7 +92,7 @@
                                     </div>
                                 </form>
                             @endauth
-
+                            <x-blog.message :status="'success'" />
                         </div>
                     </div>
                 </div>
@@ -113,3 +111,8 @@
     </div>
 
 @endsection
+@push('js')
+    <script>
+        $('.global-message').fadeOut();
+    </script>
+@endpush
