@@ -49,5 +49,6 @@ class ContactController extends Controller
             $data['message'] = 'Bizimle iletişime geçtiğiniz için teşekkür ederiz.';
         }
         return response()->json($data);
+
     }
 }
