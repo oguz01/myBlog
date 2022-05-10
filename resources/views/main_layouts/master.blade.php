@@ -20,34 +20,25 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
-
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
-
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ asset('asset/css/animate.css') }}">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="{{ asset('asset/css/icomoon.css') }}">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="{{ asset('asset/css/bootstrap.css') }}">
-
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('asset/css/magnific-popup.css') }}">
-
     <!-- Flexslider  -->
     <link rel="stylesheet" href="{{ asset('asset/css/flexslider.css') }}">
-
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="{{ asset('asset/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('asset/css/owl.theme.default.min.css') }}">
-
     <!-- Flaticons  -->
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('asset/fonts/flaticon/font/flaticon.css') }}">
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/mystyle.css') }}">
-
-
     <!-- Modernizr JS -->
     <script src="{{ asset('asset/js/modernizr-2.6.2.min.js') }}"></script>
     <!-- FOR IE9 below -->
@@ -55,12 +46,8 @@
  <script src="{{ asset('asset/js/respond.min.js') }}"></script>
  <![endif]-->
     @stack('css')
-
 </head>
-
 <body>
-
-
     <div id="page">
         <nav class="colorlib-nav" role="navigation">
 

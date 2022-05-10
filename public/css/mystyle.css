@@ -10,11 +10,36 @@
     -o-border-radius: 50px;
     color: #fff;
     z-index: 2;
-
 }
-.global-message.info{
+.global-message.info {
     background: #4586ff;
 }
-.global-message.error{
+.global-message.error {
     background: #d81d1d;
 }
+/*** Category Page Style ***/
+.categories-col .block-21 .text-center {
+    width: 100%;
+}
+.bd-example {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -0.75rem 0;
+    border: solid #dee2e6;
+    border-width: 1px 0 0;
+}
+.card {
+    padding: 5px 14px;
+    margin: 4px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+
