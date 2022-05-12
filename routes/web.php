@@ -22,3 +22,8 @@ Route::get('/kategori/{category:slug}', [\App\Http\Controllers\CategoryControlle
 Route::get('/etiket/{tag:name}', [\App\Http\Controllers\TagController::class, 'show'])->name('tags.show');
 
 require __DIR__ . '/auth.php';
+
+/**=========== Admin Dashboard =====**/
+Route::prefix('admin')->name('admin.')->middleware(['auth','isAdmin'])->group(function () {
+    Route::get('/', [\App\Http\Controllers\AdminController\DashboardController::class, 'index'])->name('index');
+});
