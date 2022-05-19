@@ -2,10 +2,10 @@
 <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
                 <div>
-                    <img src="assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+                    <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
                 </div>
                 <div>
-                    <h4 class="logo-text">MYBLOG</h4>
+                    <h4 class="logo-text">OguzSoft</h4>
                 </div>
                 <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
                 </div>
@@ -23,15 +23,15 @@
                     <a href="javascript:;" class="has-arrow">
                         <div class="parent-icon"><i class='bx bx-message-square-edit'></i>
                         </div>
-                        <div class="menu-title">Articles</div>
+                        <div class="menu-title">Yazı İşlemleri</div>
                     </a>
 
                     <ul>
-                        <li> <a href="{{ url('ecommerce-orders') }}"><i class="bx bx-right-arrow-alt"></i>All Articles</a>
+                        <li> <a href="{{ route('admin.posts.index') }}"><i class="bx bx-right-arrow-alt"></i>Tüm Yazılar</a>
                         </li>
-                        <li> <a href="{{ url('ecommerce-add-new-products') }}"><i class="bx bx-right-arrow-alt"></i>Add New Article</a>
+                        <li> <a href="{{ route('admin.posts.create') }}"><i class="bx bx-right-arrow-alt"></i>Yeni Yazı Ekle</a>
                         </li>
-                        
+
                     </ul>
                 </li>
 

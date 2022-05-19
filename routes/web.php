@@ -24,6 +24,8 @@ Route::get('/etiket/{tag:name}', [\App\Http\Controllers\TagController::class, 's
 require __DIR__ . '/auth.php';
 
 /**=========== Admin Dashboard =====**/
-Route::prefix('admin')->name('admin.')->middleware(['auth','isAdmin'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'IsAdmin'])->group(function () {
     Route::get('/', [\App\Http\Controllers\AdminController\DashboardController::class, 'index'])->name('index');
+    Route::resource('/posts', \App\Http\Controllers\AdminController\AdminPostController::class);
+    Route::post('upload_tinymce_image', [\App\Http\Controllers\AdminController\TinyMCEController::class, 'upload_tinymce_image'])->name('upload_tinymce_image');
 });
